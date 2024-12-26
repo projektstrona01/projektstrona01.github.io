@@ -1,0 +1,110 @@
+body {
+    background: linear-gradient(120deg, rgb(36, 56, 128), #4a74c1);
+}
+.duzy_napis {
+    max-width: 95%;
+    margin: 120px auto;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzp5BHz-p6_XTTJYIb7bp1HvJgWPYNstw8Aw&s');
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    text-shadow: 10px 5px rgb(0, 0, 0);
+}
+
+.produkty_m {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.sekcja_buty_m {
+    background: linear-gradient(120deg, rgb(80, 97, 208), #6785eb);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.naglowek_sekcja_buty_m {
+    background: linear-gradient(120deg, rgb(64, 76, 153), #6785eb);
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    max-width: 20%;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.nazwa_sekcja_m {
+    text-align: center;
+    font-weight: 900;
+    margin: 0;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 4px 5px rgb(56, 56, 56);
+    font-family: 'Trattatello', fantasy;
+}
+
+.grupa_produkty_m {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cztery produkty w jednym rzędzie */
+    gap: 20px; /* Odstęp między produktami */
+    padding: 0 20px;
+}
+
+.produkt_m {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produkt_m:hover {
+    transform: translateY(-8px); /* Lekki unoszenie przy najechaniu */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.produkt_m img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.produkt_m h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.produkt_m p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.produkt_m .cena {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.produkt_m .przycisk_dodaj_do_koszyka {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.produkt_m .przycisk_dodaj_do_koszyka:hover {
+    background-color: #2980b9;
+}

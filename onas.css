@@ -1,0 +1,24 @@
+body{
+    background: linear-gradient(120deg, rgb(36, 56, 128), #4a74c1);
+}
+.onas {
+    max-width: 95%;
+    margin: 120px auto auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.194);
+    color: rgba(255, 255, 255, 0.752);
+    font-size: 33px;
+}
+li{
+    list-style-type: none;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.922);
+}
+a{
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.922);
+    font-size: 45px;
+} 

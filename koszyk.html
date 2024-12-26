@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koszyk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="koszyk_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Nagłówek -->
+    <header>
+        <div class="logo">
+            <h1><a href="index.php">SKLEP</a></h1>
+        </div>
+        <div class="timer" id="timer"></div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.php" class="opcje_menu">Home</a></li>
+                <li><a href="index.php#sekcja_nowosci" class="opcje_menu">Nowości</a></li>
+                <li><a href="index.php#sekcja_hity" class="opcje_menu">HITY</a></li>
+                <li><a href="index.php#sekcja_wyprzedaz" class="opcje_menu">Wyprzedaż</a></li>
+                <li><a href="kolekcje.html" class="opcje_menu">Kolekcje</a></li>
+                <li><a href="onas.html" class="opcje_menu">O nas</a></li>
+                <li><a href="kontakt.html" class="opcje_menu">Kontakt</a></li>
+                <li><a href="koszyk.html"> <i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sekcja koszyka -->
+    <section class="koszyk">
+        <h2>Twój koszyk</h2>
+        <div id="cart-items"></div>
+        <p id="cart-total"></p>
+        <button id="payment-btn" class="przycisk_koszyk">Zapłać</button>
+    </section>
+
+    <script>
+        // Funkcja do wczytywania produktów z localStorage do koszyka
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            if (cart.length === 0) {
+                document.getElementById('cart-items').innerHTML = 'Koszyk jest pusty.';
+                document.getElementById('cart-total').innerHTML = '';
+            } else {
+                const cartItemsContainer = document.getElementById('cart-items');
+                cartItemsContainer.innerHTML = ''; // Czyszczenie obecnej zawartości
+    
+                let total = 0;
+    
+                cart.forEach((product, index) => {
+                    const productElement = document.createElement('div');
+                    productElement.classList.add('produkt_koszyk');
+                    productElement.innerHTML = `
+                        <img src="${product.obrazek_url}" alt="${product.nazwa}" class="product-img">
+                        <div class="product-details">
+                            <h3>${product.nazwa}</h3>
+                            <p>Cena: ${product.cena} PLN</p>
+                            <p>Ilość: ${product.quantity}</p>
+                            <span class="cena">${product.cena * product.quantity} PLN</span>
+                        </div>
+                        <button class="remove-btn" onclick="removeProduct(${index})">Usuń</button>
+                    `;
+                    cartItemsContainer.appendChild(productElement);
+    
+                    // Obliczanie łącznej ceny koszyka
+                    total += product.cena * product.quantity;
+                });
+    
+                // Wyświetlanie łącznej ceny koszyka
+                document.getElementById('cart-total').innerHTML = `Łączna cena: <span>${total} PLN</span>`;
+            }
+        }
+    
+        // Funkcja do usuwania produktów z koszyka
+        function removeProduct(index) {
+            // Pobierz koszyk z localStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            // Usuń produkt z koszyka na podstawie indeksu
+            if (index >= 0 && index < cart.length) {
+                cart.splice(index, 1); // Usuwa jeden element z podanej pozycji
+            }
+    
+            // Zaktualizuj localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+    
+            // Odśwież widok koszyka
+            loadCart();
+        }
+    
+        // Załaduj koszyk po załadowaniu strony
+        loadCart();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

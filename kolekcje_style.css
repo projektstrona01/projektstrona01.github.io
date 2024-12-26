@@ -1,0 +1,188 @@
+body{
+    background: linear-gradient(120deg, rgb(36, 56, 128), #4a74c1);
+}
+.kolekcje {
+    max-width: 95%;
+    margin: 120px auto auto;
+    padding: 20px;
+    background-image: url('https://www.sportireland.ie/sites/default/files/styles/widescreen_television/public/2024-02/az4i7493.jpg?h=b9d7a18a&itok=ERtP_eO4');
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.kolekcje h1 {
+    text-align: center;
+    font-weight: 900;
+    margin: 0;
+	font-size: 80px;
+	color: white;
+	text-shadow: 4px 4px  5px rgb(56, 56, 56);
+	
+}
+
+.kolekcje h2 {
+    font-weight: 900;
+    margin: 0 0 20px 0; /* Margines poniżej nagłówka */
+    font-size: 60px; /* Rozmiar czcionki dla nagłówka */
+    text-shadow: 4px 4px 5px rgb(56, 56, 56);
+  
+}
+
+.bloki {
+    display: flex; /* Flexbox dla układu bloków */
+    justify-content: space-between; /* Równomierne rozmieszczenie elementów */
+    margin-bottom: 30px;
+}
+.bloki a {
+    text-decoration: none;
+    color: inherit;
+    width: 32%;
+}
+.m:hover, .k:hover, .d:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(120deg, rgba(8, 70, 114, 0.95), rgba(20, 165, 255, 0.95)); /* Zmniejszona przezroczystość tła */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.k:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(120deg, rgb(109, 3, 93, 0.95), #d849ff); /* Zmniejszona przezroczystość tła */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.d:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(120deg, rgba(0, 124, 71, 0.95), #0bbf95); /* Zmniejszona przezroczystość tła */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.m {
+    height: 600px;
+    background: linear-gradient(120deg, rgba(8, 70, 114, 0.600), #14a5ff);
+    display: flex; /* Flexbox dla wypośrodkowania tekstu */
+    justify-content: center; /* Wypośrodkowanie poziome */
+    align-items: center; /* Wypośrodkowanie pionowe */
+    text-align: center; /* Centrowanie tekstu w elemencie */
+    color: rgb(176, 225, 255); /* Kolor tekstu */
+    font-size: 24px; /* Rozmiar czcionki */
+    font-weight: 900; /* Wyróżnienie tekstu */
+    border-radius: 15px; /* Zaokrąglone narożniki */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Lekki cień */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.k {
+    height: 600px;
+    background: linear-gradient(120deg, rgb(109, 3, 93, 0.600), #d749ff);
+    display: flex; /* Flexbox dla wypośrodkowania tekstu */
+    justify-content: center; /* Wypośrodkowanie poziome */
+    align-items: center; /* Wypośrodkowanie pionowe */
+    text-align: center; /* Centrowanie tekstu w elemencie */
+    color: rgb(245, 173, 255); /* Kolor tekstu */
+    font-size: 24px; /* Rozmiar czcionki */
+    font-weight: 900; /* Wyróżnienie tekstu */
+    border-radius: 15px; /* Zaokrąglone narożniki */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Lekki cień */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.d {
+    height: 600px;
+    background: linear-gradient(120deg, rgba(0, 124, 71, 0.600), #0bbf95);
+    display: flex; /* Flexbox dla wypośrodkowania tekstu */
+    justify-content: center; /* Wypośrodkowanie poziome */
+    align-items: center; /* Wypośrodkowanie pionowe */
+    text-align: center; /* Centrowanie tekstu w elemencie */
+    color: rgb(182, 255, 222); /* Kolor tekstu */
+    font-size: 24px; /* Rozmiar czcionki */
+    font-weight: 900; /* Wyróżnienie tekstu */
+    border-radius: 15px; /* Zaokrąglone narożniki */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Lekki cień */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/*
+body{
+    background: #fdb12f;
+}
+.kolekcje {
+    max-width:90%;
+    margin: 120px auto;
+    padding: 20px;
+    background: linear-gradient(120deg, rgb(255, 139, 15), #f8d389);
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.kolekcje h2 {
+    text-align: center;
+    font-weight: 900;
+    margin: 0;
+	font-size: 80px;
+	color: white;
+	text-shadow: 4px 4px  5px rgb(56, 56, 56);
+	
+}
+
+
+.kolekcje h1 {
+    text-align: center;
+    font-weight: 900;
+    margin: 0;
+	font-size: 80px;
+	color: white;
+	text-shadow: 4px 4px  5px rgb(56, 56, 56);
+    
+}
+.m {
+    width: 30%;
+    height: 400px;
+    margin-bottom: 50px;
+    background: linear-gradient(120deg, rgba(8, 70, 114, 0.773), #14a5ff);
+    display: inline-block;
+    text-align: justify;
+}
+.k {
+    width: 30%;
+    height: 400px;
+    margin: auto;
+    background: linear-gradient(120deg, rgba(109, 3, 93, 0.773), #d749ff);
+    display: inline-block;
+}
+.d {
+    width: 30%;
+    height: 400px;
+    margin: auto;
+    background: linear-gradient(120deg, rgba(0, 124, 71, 0.773), #0bbf95ec);
+    display: inline-block;
+}
+    */
+/*
+.produkt_koszyk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.przycisk_koszyk {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.przycisk_koszyk:hover {
+    background: #0056b3;
+}
+*/
